@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Monitores</title>
+</head>
+<body>
+    <h1>Lista de Monitores</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Numerode Serie</th>
+            <th>Tamano</th>
+            <th>Color</th>
+            <th>Precio</th>
+        </tr>
+        <tr th:each="monitor : ${monitores}">
+            <td th:text="${monitor.id}"></td>
+            <td th:text="${monitor.marca}"></td>
+            <td th:text="${monitor.modelo}"></td>
+            <td th:text="${monitor.numSerie}"></td>
+            <td th:text="${monitor.tamano}"></td>
+            <td th:text="${monitor.color}"></td>
+            <td th:text="${monitor.precio}"></td>
+        </tr>
+    </table>
+</body>
+</html>
